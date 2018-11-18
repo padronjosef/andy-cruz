@@ -1,0 +1,148 @@
+body{
+    margin: 0;
+    background: #D8CDC6;
+}
+
+.main-container {
+    max-width: 80vw;
+    flex: 1;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: [inicio] 1fr [linea2] 1fr [centro] 1fr [linea4] 1fr [final] 1fr;
+    grid-template-rows: [header]7.5vh [me]7.5vh [hero] 70vh [footer]10vh [final];
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-template-areas: "logo header header header header"
+                          "logo me me me me"
+                          "draw-container draw-container draw-container draw-container draw-container"
+                          "footer footer footer footer footer";
+}
+
+.logo-container {
+    display: flex;
+}
+
+.logo {
+    grid-area: logo;
+    align-content: center;
+    justify-content: center;
+}
+
+.header {
+    grid-area: header;
+    background: #565656;
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+.me {
+    grid-area: me;
+    border-top-left-radius: 20px;
+    color: #73323F;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 8px;
+}
+
+.footer {
+    grid-area: footer;
+    background: rgb(26, 26, 26);
+    color: #D5D5D5;
+    font-family: 'Pacifico', cursive;
+    font-size: 10px;
+}
+
+.draw-container {
+    grid-area: draw-container;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+}
+
+p {
+    margin: 0;
+    justify-items: top;
+}
+
+.draws {
+    margin: 0;
+    height: 65vh;
+}
+
+.draws img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+figure {
+    display: flex;
+}
+
+.footer {
+    color: white;
+    background-color: #1b2127;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 50px;
+    flex-wrap: wrap;
+}
+
+.footer img {
+    vertical-align: middle;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Animacion de la descripcion de los dibujos */
+.grid-item {
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+
+.draw-overlay {
+    background: rgba(0,0,0, .5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.grid-item:hover .draw-overlay {
+    display: flex;
+}
+
+.draw-description {
+    width: 80px;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
