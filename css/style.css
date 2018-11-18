@@ -49,11 +49,11 @@ body{
 }
 
 .me {
+    font-size: .6em;
     grid-area: me;
     border-top-left-radius: 20px;
     color: #73323F;
     font-family: 'Permanent Marker', cursive;
-    font-size: 8px;
 }
 
 .footer {
@@ -61,7 +61,7 @@ body{
     background: rgb(26, 26, 26);
     color: #D5D5D5;
     font-family: 'Pacifico', cursive;
-    font-size: 10px;
+    font-size: .5em;
 }
 
 .draw-container {
