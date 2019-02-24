@@ -4,30 +4,31 @@ body{
 }
 
 .main-container {
-    max-width: 80vw;
-    flex: 1;
+    max-width: 95vw;
     margin: 0 auto;
-    display: inherit;
-    justify-content: inherit;
-    align-items: inherit;
-    height: inherit;
-    flex-wrap: inherit;
 }
 
 .grid-container{
     display: grid;
     grid-template-columns: [inicio] 1fr [linea2] 1fr [centro] 1fr [linea4] 1fr [final] 1fr;
-    grid-template-rows: [header]7.5vh [me]7.5vh [hero] 70vh [footer]10vh [final];
+    grid-template-rows: [header] [me] [hero] [footer] [final];
     align-content: center;
     justify-content: center;
     align-items: center;
     text-align: center;
-    grid-template-areas: "logo header header header header"
-                          "logo me me me me"
-                          "draw-container draw-container draw-container draw-container draw-container"
-                          "footer footer footer footer footer";
+    flex-wrap: wrap;
+    grid-template-areas:"logo header header header header"
+                        "logo me me me me"
+                        "draw-container draw-container draw-container draw-container draw-container"
+                        "footer footer footer footer footer";
 }
 
+p {
+    padding: 0;
+    margin: 0;
+}
+
+                                                        /*logo*/
 .logo-container {
     display: flex;
 }
@@ -36,49 +37,41 @@ body{
     grid-area: logo;
     align-content: center;
     justify-content: center;
+    height: 13vh;
 }
 
+                                                        /*header*/
 .header {
     grid-area: header;
     background: #565656;
     color: white;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 0 0 15px 15px;
     font-family: 'Permanent Marker', cursive;
-
+    height: 5vh;
 }
 
+                                                        /*me*/
 .me {
-    font-size: .6em;
+    font-size: 14px;
     grid-area: me;
     border-top-left-radius: 20px;
     color: #73323F;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Permanent Marker';
+    height: 8vh;
 }
 
-.footer {
-    grid-area: footer;
-    background: rgb(26, 26, 26);
-    color: #D5D5D5;
-    font-family: 'Pacifico', cursive;
-    font-size: .5em;
-}
-
+                                                        /*imagenes*/
 .draw-container {
     grid-area: draw-container;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 5px;
-}
-
-p {
-    margin: 0;
-    justify-items: top;
+    margin: 1vh;
 }
 
 .draws {
     margin: 0;
-    height: 65vh;
+    height: 80vh;
 }
 
 .draws img {
@@ -90,14 +83,18 @@ figure {
     display: flex;
 }
 
+                                                        /*footer*/
 .footer {
-    color: white;
+    grid-area: footer;
+    font-family: 'Pacifico', cursive;
+    font-size: .5em;
     background-color: #1b2127;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 0 50px;
-    flex-wrap: wrap;
+    color: #D5D5D5;
+    height: 5vh;
+    border-radius: 15px 15px 0 0;
 }
 
 .footer img {
@@ -109,9 +106,6 @@ figure {
     text-decoration: none;
 }
 
-.footer p {
-    margin: 0;
-}
 
 /* Animacion de la descripcion de los dibujos */
 .grid-item {
