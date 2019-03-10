@@ -266,7 +266,7 @@ figure {
 .credits-description {
     font-weight: bold;
     display: inline-block;
-    width: 110px;
+    width: 100px;
 }
 
 .grid-credits:hover .credits-overlay {
