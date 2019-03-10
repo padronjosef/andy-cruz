@@ -83,9 +83,19 @@ p {
     margin: 0;
 }
 
+.photo2 {
+    margin: 0;
+}
+
 .photo img {
     border-radius: 50%;
     align-items: center;
+}
+
+.photo2 img {
+    border-radius: 50%;
+    align-items: center;
+    display: none;
 }
 
                                                         /*header*/
@@ -178,7 +188,7 @@ figure {
 
                                     /* Animacion de la descripcion de los dibujos */
 .grid-item {
-    cursor: pointer;
+    cursor: pointer;    
     position: relative;
     display: block;
 }
@@ -258,7 +268,6 @@ figure {
     bottom: 0;
     top: 0;
     display: none;
-    color: #D5D5D5;
     font-size: 1em;
     background: #1B2127;
 }
@@ -272,3 +281,6 @@ figure {
 .grid-credits:hover .credits-overlay {
     display: flex;
 }
+
+                                    /* photo */
+
