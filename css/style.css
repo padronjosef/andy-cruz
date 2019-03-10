@@ -88,7 +88,6 @@ p {
     align-items: center;
 }
 
-
                                                         /*header*/
 .header {
     grid-area: header;
@@ -130,7 +129,7 @@ p {
 .draws {
     margin: 0;
     height: 60vh;
-    filter:brightness(0.7);
+    filter:brightness(0.3);
 }
 
 .draws img {
@@ -177,8 +176,7 @@ figure {
     text-decoration: none;
 }
 
-
-                                                        /* Animacion de la descripcion de los dibujos */
+                                    /* Animacion de la descripcion de los dibujos */
 .grid-item {
     cursor: pointer;
     position: relative;
@@ -186,20 +184,17 @@ figure {
 }
 
 .draw-overlay {
-    background: rgba(0,0,0, .5);
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
     display: none;
-    align-items: center;
+    align-items: top;
     justify-content: center;
-    color: white;
+    color: #D5D5D5;
     text-align: center;
-    border-radius: 15px;
-    font-size: 50px;
-    width: auto;
+    font-size: 3em;
 }
 
 .grid-item:hover .draw-overlay {
@@ -211,4 +206,69 @@ figure {
     font-weight: bold;
     text-align: center;
     display: inline-block;
+}
+
+.grid-item:hover {
+    transform: scale(1.4, 1.1);
+    transition: .25s;
+    z-index: 1;
+    filter: brightness(3);
+}
+
+.gallery-1:hover{
+    transform: scale(1.4, 1.1) translate(20px);
+}
+
+.gallery-5:hover{
+    transform: scale(1.4, 1.1) translate(-20px);
+}
+
+                                    /* iconos de redes sociales */
+
+.icon-facebook:hover {
+    color: #4267B2;
+}
+
+.icon-instagram:hover {
+    background: radial-gradient(circle farthest-corner  at 35% 90%,   #fec564, transparent 30%), 
+                radial-gradient(circle farthest-corner  at 0 140%,    #fec564, transparent 30%), 
+                radial-gradient(ellipse farthest-corner at 0 -25%,    #5258cf, transparent 30%), 
+                radial-gradient(ellipse farthest-corner at 20% -50%,  #5258cf, transparent 30%), 
+                radial-gradient(ellipse farthest-corner at 100% 0,    #893dc2, transparent 30%),
+                radial-gradient(ellipse farthest-corner at 60% -20%,  #893dc2, transparent 30%),
+                radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), 
+                linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+    border-radius: 30%;
+}
+
+.icon-deviantart:hover {
+    color: #05CC47;
+}
+
+                                    /* creditos */
+
+.grid-credits{
+    position: relative;
+}
+
+.credits-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    color: #D5D5D5;
+    font-size: 1em;
+    background: #1B2127;
+}
+
+.credits-description {
+    font-weight: bold;
+    display: inline-block;
+    width: 110px;
+}
+
+.grid-credits:hover .credits-overlay {
+    display: flex;
 }
