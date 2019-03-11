@@ -37,8 +37,6 @@
 }
 
 
-
-
 body{
     margin: 0;
     background-image: url("../images/wallpaper.jpg");
@@ -71,31 +69,30 @@ p {
 }
 
                                                         /*logo*/
-
 .photo-container {
     grid-area: photo;
     display: flex;
     height: 16vh;
-    margin: auto;
+
 }
 
 .photo {
     margin: 0;
+    position: relative;
+    float: left;
 }
 
-.photo2 {
-    margin: 0;
-}
-
-.photo img {
+.photo img  {
     border-radius: 50%;
     align-items: center;
+    height:100px;
+    width: 100px;
+    position: absolute;
+    transition: opacity 1s ease-out;
 }
 
-.photo2 img {
-    border-radius: 50%;
-    align-items: center;
-    display: none;
+.photo img.top:hover {
+    opacity: 0;
 }
 
                                                         /*header*/
@@ -124,6 +121,8 @@ p {
     width: 80%;
     margin: 3vh 0 10vh 7%;
     border-radius: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
                                                         /*imagenes*/
@@ -283,4 +282,6 @@ figure {
 }
 
                                     /* photo */
+
+
 
