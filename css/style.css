@@ -69,31 +69,33 @@ p {
 }
 
                                                         /*logo*/
-.photo-container {
+.photo {
     grid-area: photo;
     display: flex;
     height: 16vh;
 
 }
 
-.photo {
+.photo-container {
     margin: 0;
     position: relative;
     float: left;
 }
 
-.photo img  {
+.photo-container img  {
     border-radius: 50%;
     align-items: center;
-    position: absolute;
     transition: opacity 1s ease-out;
+    width: 90px;
+    height: 90px;
+    position: absolute;
 }
 
 .top {
     position: absolute;
 }
 
-.photo img.top:hover {
+.photo-container img.top:hover {
     opacity: 0;
 }
 
