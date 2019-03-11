@@ -75,35 +75,6 @@ p {
     height: 16vh;
 }
 
-.photo-container {
-    margin: 0;
-    position: relative;
-    float: left;
-    width: 90px;
-    height: 90px;
-}
-
-.photo-container img  {
-    border-radius: 50%;
-    align-items: center;
-    transition: opacity 1s ease-out;
-    position: absolute;
-    width: 90px;
-    height: 90px;
-}
-
-.top {
-    position: absolute;
-    width: 90px;
-    height: 90px;
-}
-
-.photo-container img.top:hover {
-    opacity: 0;
-    width: 90px;
-    height: 90px;
-}
-
                                                         /*header*/
 .header {
     grid-area: header;
@@ -291,6 +262,31 @@ figure {
 }
 
                                     /* photo */
+.photo-container {
+    margin: 0;
+    position: relative;
+    float: left;
+    width: 90px;
+    height: 90px;
+}
 
+.photo-container img  {
+    border-radius: 50%;
+    align-items: center;
+    transition: opacity 1s ease-out;
+    position: absolute;
+    width: 90px;
+    height: 90px;
+}
 
+.top {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+}
 
+.photo-container img.top:hover {
+    opacity: 0;
+    width: 90px;
+    height: 90px;
+}
