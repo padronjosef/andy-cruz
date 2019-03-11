@@ -85,10 +85,12 @@ p {
 .photo img  {
     border-radius: 50%;
     align-items: center;
-    height:100px;
-    width: 100px;
     position: absolute;
     transition: opacity 1s ease-out;
+}
+
+.top {
+    position: absolute;
 }
 
 .photo img.top:hover {
