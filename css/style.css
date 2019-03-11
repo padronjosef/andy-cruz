@@ -93,6 +93,8 @@ p {
 
 .top {
     position: absolute;
+    width: 90px;
+    height: 90px;
 }
 
 .photo-container img.top:hover {
