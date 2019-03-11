@@ -125,12 +125,6 @@ p {
     flex-wrap: wrap;
 }
 
-.draws {
-    margin: 0;
-    height: 60vh;
-    filter:brightness(0.3);
-}
-
 .draws img {
     width: 100%;
     border-radius: 15px;
@@ -181,7 +175,6 @@ figure {
     max-width: 18%;
     margin: 0 1%;
 }
-
 
                                     /* creditos */
 
@@ -313,7 +306,11 @@ figure {
     body {
         background-image: url("../images/wallpaper.jpg");
     }
-
+    .draws {
+        margin: 0;
+        height: 60vh;
+        filter:brightness(0.3);
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -357,6 +354,11 @@ figure {
     .me {
         width: 100%;
         margin: auto;
+    }
+
+    .draws {
+        margin: 0;
+        height: 450px;
     }
 
     .draws img {
