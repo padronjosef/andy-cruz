@@ -39,7 +39,6 @@
 
 body{
     margin: 0;
-    background-image: url("../images/wallpaper.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     font-size: 16px;
@@ -90,7 +89,7 @@ p {
     font-size: 1.5em;
     border-radius: 50% 50% 50px 50px;
     background: #565656;
-    height: 5vh;
+    height: 30px;
     width: 300px;
 
 }
@@ -129,7 +128,6 @@ p {
 .draws {
     margin: 0;
     height: 60vh;
-
     filter:brightness(0.3);
 }
 
@@ -153,10 +151,10 @@ figure {
     justify-content: space-around;
     color: #D5D5D5;
     height: 35px;
-    width: 40%;
+    width: 50%;
     margin: auto;
     border-radius: 50px 50px 50% 50%;
-    margin-top: 7vh;
+    margin-top: 1%;
 }
 
 .footer img {
@@ -184,67 +182,6 @@ figure {
     margin: 0 1%;
 }
 
-.draw-overlay {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    display: none;
-    align-items: top;
-    justify-content: center;
-    color: #D5D5D5;
-    text-align: center;
-    font-size: 3em;
-}
-
-.grid-item:hover .draw-overlay {
-    display: flex;
-}
-
-.draw-description {
-    margin: 5px;
-    font-weight: bold;
-    text-align: center;
-    display: inline-block;
-}
-
-.grid-item:hover {
-    transform: scale(1.4, 1.1);
-    transition: .25s;
-    z-index: 1;
-    filter: brightness(3);
-}
-
-.gallery-1:hover{
-    transform: scale(1.4, 1.1) translate(20px);
-}
-
-.gallery-5:hover{
-    transform: scale(1.4, 1.1) translate(-20px);
-}
-
-                                    /* iconos de redes sociales */
-
-.icon-facebook:hover {
-    color: #4267B2;
-}
-
-.icon-instagram:hover {
-    background: radial-gradient(circle farthest-corner  at 35% 90%,   #fec564, transparent 30%), 
-                radial-gradient(circle farthest-corner  at 0 140%,    #fec564, transparent 30%), 
-                radial-gradient(ellipse farthest-corner at 0 -25%,    #5258cf, transparent 30%), 
-                radial-gradient(ellipse farthest-corner at 20% -50%,  #5258cf, transparent 30%), 
-                radial-gradient(ellipse farthest-corner at 100% 0,    #893dc2, transparent 30%),
-                radial-gradient(ellipse farthest-corner at 60% -20%,  #893dc2, transparent 30%),
-                radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), 
-                linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
-    border-radius: 30%;
-}
-
-.icon-deviantart:hover {
-    color: #05CC47;
-}
 
                                     /* creditos */
 
@@ -266,7 +203,7 @@ figure {
 .credits-description {
     font-weight: bold;
     display: inline-block;
-    width: 100px;
+    width: auto;
 }
 
 .grid-credits:hover .credits-overlay {
@@ -303,6 +240,93 @@ figure {
     height: 90px;
 }
 
+.draw-description {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .draw-overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        display: none;
+        align-items: top;
+        justify-content: center;
+        color: #D5D5D5;
+        text-align: center;
+        font-size: 3em;
+        }
+
+    .grid-item:hover .draw-overlay {
+        display: flex;
+    }
+
+    .draw-description {
+        margin: 5px;
+        font-weight: bold;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .grid-item:hover {
+        transform: scale(1.4, 1.1);
+        transition: .25s;
+        z-index: 1;
+        filter: brightness(3);
+    }
+
+    .gallery-1:hover{
+        transform: scale(1.4, 1.1) translate(20px);
+    }
+
+    .gallery-5:hover{
+        transform: scale(1.4, 1.1) translate(-20px);
+    }
+
+                                    /* iconos de redes sociales */
+
+    .icon-facebook:hover {
+        color: #4267B2;
+    }
+
+    .icon-instagram:hover {
+        background: radial-gradient(circle farthest-corner  at 35% 90%,   #fec564, transparent 30%), 
+                    radial-gradient(circle farthest-corner  at 0 140%,    #fec564, transparent 30%), 
+                    radial-gradient(ellipse farthest-corner at 0 -25%,    #5258cf, transparent 30%), 
+                    radial-gradient(ellipse farthest-corner at 20% -50%,  #5258cf, transparent 30%), 
+                    radial-gradient(ellipse farthest-corner at 100% 0,    #893dc2, transparent 30%),
+                    radial-gradient(ellipse farthest-corner at 60% -20%,  #893dc2, transparent 30%),
+                    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), 
+                    linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+        border-radius: 30%;
+    }
+
+    .icon-deviantart:hover {
+        color: #05CC47;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-image: url("../images/wallpaper.jpg");
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        background-image: url("../images/wallpaper-phone.jpg");
+    }
+
+    .grid-item {
+        max-width: 45%;
+        margin: 1% auto;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .footer {
         width: 80%;
@@ -317,12 +341,12 @@ figure {
 
 @media screen and (max-width: 480px) {
     .grid-container{
-        grid-template-columns: [linea1] 1fr[linea2] 1fr;
-        grid-template-areas:" header header"
-                            " photo photo"
-                            " me me"
-                            " draw-container draw-container"
-                            " footer footer";
+        grid-template-columns: [linea1] auto;
+        grid-template-areas:" header "
+                            " photo "
+                            " me "
+                            " draw-container "
+                            " footer ";
     }
 
     .photo {
@@ -335,21 +359,33 @@ figure {
         margin: auto;
     }
 
+    .draws img {
+        border-radius: 0;
+    }
+
     .grid-item {
-        cursor: pointer;
-        max-width: 100%;
-        margin: 1% 0;
+        max-width: 75%;
+        margin: 1% auto;
     }
 
     .footer {
         font-size: .7em;
+        width: 100%;
+        height: 30px;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
     }
-}
 
-@media screen and (max-width: 479px) {
-    .footer {
-        margin: auto;
-        height: 60px;
+    .footer span {
+        display: none;
+    }
 
+    .footer p {
+        height: 20px;
+    }
+
+    .gallery-phone {
+        display: none;
     }
 }
