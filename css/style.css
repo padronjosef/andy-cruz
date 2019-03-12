@@ -105,7 +105,6 @@ p {
     height: auto;
     width: 80%;
     margin: 4vh 0 10vh 7%;
-    border: 2px solid rgba(119, 119, 119);
     border-radius: 15px;
     justify-content: center;
     align-items: center;
@@ -124,6 +123,11 @@ p {
     margin: 1vh;
     display: flex;
     flex-wrap: wrap;
+}
+
+.draws {
+    margin: 0;
+    height: 60vh;
 }
 
 .draws img {
@@ -308,8 +312,6 @@ figure {
         background-image: url("../images/wallpaper.jpg");
     }
     .draws {
-        margin: 0;
-        height: 60vh;
         filter:brightness(0.3);
     }
 }
@@ -322,6 +324,10 @@ figure {
     .grid-item {
         max-width: 45%;
         margin: 1% auto;
+    }
+
+    .draw {
+        height: 100%;
     }
 }
 
@@ -355,6 +361,7 @@ figure {
     .me {
         width: 100%;
         margin: auto;
+        border: 2px solid rgba(119, 119, 119);
     }
 
     .draws {
