@@ -80,7 +80,7 @@ p {
     display: flex;
     justify-content: center;
     color: #ffffff;
-
+    margin-top: 5px
 }
 
 .header p {
@@ -103,7 +103,7 @@ p {
     font-family: 'Ubuntu', sans-serif;
     height: auto;
     width: 80%;
-    margin: 4vh 0 10vh 7%;
+    margin: 30px 0 70px 7%;
     border-radius: 15px;
     justify-content: center;
     align-items: center;
@@ -117,9 +117,7 @@ p {
                                                         /*imagenes*/
 .draw-container {
     grid-area: draw-container;
-    display: grid;
-    grid-gap: 15px;
-    margin: 1vh;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -132,6 +130,9 @@ p {
 .draws img {
     width: 100%;
     border-radius: 15px;
+    border: 1px solid rgb(0, 0, 0, .5);
+
+
 }
 
 figure {
@@ -152,7 +153,7 @@ figure {
     width: 50%;
     margin: auto;
     border-radius: 50px 50px 50% 50%;
-    margin-top: 1%;
+    margin-top: 20px;
 }
 
 .footer img {
@@ -268,6 +269,10 @@ figure {
         display: inline-block;
     }
 
+    .draws {
+        filter:brightness(0.3);
+    }
+
     .grid-item:hover {
         transform: scale(1.4, 1.1);
         transition: .25s;
@@ -310,36 +315,31 @@ figure {
     body {
         background-image: url("../images/wallpaper.jpg");
     }
-    .draws {
-        filter:brightness(0.3);
-    }
-}
-
-@media screen and (max-width: 767px) {
-    body {
-        background-image: url("../images/wallpaper-phone.jpg");
-    }
-
-    .grid-item {
-        max-width: 45%;
-        margin: 1% auto;
-    }
-
-    .draw {
-        height: 100%;
-    }
 }
 
 @media screen and (max-width: 768px) {
     .footer {
         width: 80%;
-        margin-top: 4vh;
+        margin-top: 10px;
     }
     .me {
         border: 2px solid rgba(119, 119, 119, 0.3);
         text-align: justify;
+        margin-bottom: 20px;
     }
 
+    body {
+        background-image: url("../images/wallpaper-phone.jpg");
+    }
+
+    .grid-item {
+        max-width: 49%;
+        margin: 1% auto;
+    }
+
+    .draw-container {
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -360,6 +360,7 @@ figure {
     .me {
         width: 100%;
         margin: auto;
+        margin-bottom: 20px;
     }
 
     .draws {
