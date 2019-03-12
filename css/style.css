@@ -71,7 +71,6 @@ p {
 .photo {
     grid-area: photo;
     display: flex;
-    height: 16vh;
     margin: auto;
 }
 
