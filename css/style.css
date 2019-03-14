@@ -242,6 +242,21 @@ figure {
     display: none;
 }
 
+@keyframes animationIn {
+    0% {
+        transform: translateY(-3000px);
+    }
+    60% {
+        transform: translateY(25px);
+    }
+    75% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
 @media screen and (min-width: 1024px) {
 
     .draw-overlay {
@@ -256,6 +271,7 @@ figure {
         color: #D5D5D5;
         text-align: center;
         font-size: 3em;
+
         }
 
     .grid-item:hover .draw-overlay {
@@ -271,6 +287,18 @@ figure {
 
     .draws {
         filter:brightness(0.3);
+    }
+
+    .draws1, .draws5{
+        animation: animationIn 2.1s;
+    }
+
+    .draws2, .draws4{
+        animation: animationIn 1.8s;
+    }
+
+    .draws3 {
+        animation: animationIn 1.5s;
     }
 
     .grid-item:hover {
@@ -360,7 +388,7 @@ figure {
     .me {
         width: 100%;
         margin: auto;
-        margin-bottom: 20px;
+        margin-bottom: 20px;    
     }
 
     .draws {
