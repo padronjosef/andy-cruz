@@ -41,21 +41,17 @@ body{
     margin: 0;
     background-size: cover;
     background-repeat: no-repeat;
-    font-size: 16px;
 }
 
 .main-container {
-    max-width: 95vw;
-    display: flex;
-    margin: auto;
+    width: 100vw;
     text-align: center;
 }
 
 .grid-container{
     display: grid;
     grid-template-columns: [linea1] 0.5fr[linea2] 8fr;
-    grid-template-rows: [header] [me] [hero] [footer] [final];
-    flex-wrap: wrap;
+    grid-template-rows: [header] [me] [hero] [footer];
     grid-template-areas:"header header"
                         "photo me"
                         "draw-container draw-container"
@@ -67,14 +63,12 @@ p {
     margin: 0;
 }
 
-                                                        /*logo*/
+                                                                        /*logo*/
 .photo {
     grid-area: photo;
-    display: flex;
-    margin: auto;
 }
 
-                                                        /*header*/
+                                                                        /*header*/
 .header {
     grid-area: header;
     display: flex;
@@ -90,10 +84,9 @@ p {
     background: #565656;
     height: 30px;
     width: 300px;
-
 }
 
-                                                        /*me*/
+                                                                        /*me*/
 .me {
     grid-area: me;
     font-size: 1.0em;
@@ -104,48 +97,71 @@ p {
     height: auto;
     width: 80%;
     margin: 30px 0 70px 7%;
-    border-radius: 15px;
+    border-radius: 5px;
     justify-content: center;
     align-items: center;
 }
 
 .me p {
     padding: 0 20px;
-
 }
 
-                                                        /*imagenes*/
+                                                                        /*imagenes*/
 .draw-container {
     grid-area: draw-container;
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-.draws {
-    margin: 0;
-    height: 60vh;
+.parent {
+    height: 380px;
+    width: 18%;
+    margin: auto;
+    border: 2px solid rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-.draws img {
+.child {
+    height: 100%;
     width: 100%;
-    border-radius: 15px;
-    border: 1px solid rgb(0, 0, 0, .5);
-
-
+    background-size: cover;
+    transition: all .5s;
 }
 
-figure {
-    display: flex;
+.bg-1 {background-image: url("../images/1/IMG1.jpg");}
+.bg-2 {background-image: url("../images/2/IMG6.jpg");}
+.bg-3 {background-image: url("../images/3/IMG11.jpg");}
+.bg-4 {background-image: url("../images/4/IMG16.jpg");}
+.bg-5 {background-image: url("../images/5/IMG21.jpg");}
+
+.child a {
+    display: none;
+    font-size: 35px;
+    color: white !important;
+    font-family: sans-serif;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    cursor: pointer;
+    /*text-decoration: none;*/
 }
 
                                                         /*footer*/
 .footer {
     grid-area: footer;
+    display: flex;
     font-family: 'Spectral', serif;
     font-size: .8em;
     background-color: #1b2127;
-    display: flex;
     align-items: center;
     justify-content: space-around;
     color: #D5D5D5;
@@ -170,15 +186,6 @@ figure {
     height: 4vh;
     margin: 5px;
     font-size: 1.5em;
-    color: white;
-    text-decoration: none;
-}
-
-                                    /* Animacion de la descripcion de los dibujos */
-.grid-item {
-    cursor: pointer;
-    max-width: 18%;
-    margin: 0 1%;
 }
 
                                     /* creditos */
@@ -210,8 +217,8 @@ figure {
 
                                     /* photo */
 .photo-container {
-    margin: 0;
     position: relative;
+    margin: 0;
     float: left;
     width: 90px;
     height: 90px;
@@ -238,82 +245,34 @@ figure {
     height: 90px;
 }
 
-.draw-description {
-    display: none;
-}
-
-@keyframes animationIn {
-    0% {
-        transform: translateY(-3000px);
-    }
-    60% {
-        transform: translateY(25px);
-    }
-    75% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(5px);
-    }
-}
-
 @media screen and (min-width: 1024px) {
+    
+    .draw-container {
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
 
-    .draw-overlay {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
+    .parent:hover .child, .parent:focus .child {
+        transform: scale(1.2);
+    }
+    
+    .parent:hover .child:before, .parent:focus .child:before {
+        display: block;
+    }
+    
+    .parent:hover a, .parent:focus a {
+        display: block;
+    }
+    
+    .child:before {
+        content: "";
         display: none;
-        align-items: top;
-        justify-content: center;
-        color: #D5D5D5;
-        text-align: center;
-        font-size: 3em;
-
-        }
-
-    .grid-item:hover .draw-overlay {
-        display: flex;
-    }
-
-    .draw-description {
-        margin: 5px;
-        font-weight: bold;
-        text-align: center;
-        display: inline-block;
-    }
-
-    .draws {
-        filter:brightness(0.3);
-    }
-
-    .draws1, .draws5{
-        animation: animationIn 2.1s;
-    }
-
-    .draws2, .draws4{
-        animation: animationIn 1.8s;
-    }
-
-    .draws3 {
-        animation: animationIn 1.5s;
-    }
-
-    .grid-item:hover {
-        transform: scale(1.4, 1.1);
-        transition: .25s;
-        z-index: 1;
-        filter: brightness(3);
-    }
-
-    .gallery-1:hover{
-        transform: scale(1.4, 1.1) translate(20px);
-    }
-
-    .gallery-5:hover{
-        transform: scale(1.4, 1.1) translate(-20px);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
                                     /* iconos de redes sociales */
@@ -343,30 +302,35 @@ figure {
     body {
         background-image: url("../images/wallpaper.jpg");
     }
+
+    .draw-container {
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    .footer {
-        width: 80%;
-        margin-top: 10px;
+    body {
+        background-image: url("../images/wallpaper-phone.jpg");
     }
+
     .me {
         border: 2px solid rgba(119, 119, 119, 0.3);
         text-align: justify;
         margin-bottom: 20px;
     }
 
-    body {
-        background-image: url("../images/wallpaper-phone.jpg");
-    }
-
-    .grid-item {
-        max-width: 49%;
-        margin: 1% auto;
-    }
-
     .draw-container {
         margin-bottom: 10px;
+    }
+
+    .parent {
+        width: 45%;
+        margin: 1% 2%;    
+    }
+
+    .footer {
+        width: 80%;
+        margin-top: 10px;
     }
 }
 
@@ -382,7 +346,14 @@ figure {
 
     .photo {
         margin-top: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .photo-container {
+        display: inherit;
+        justify-content: inherit;
     }
 
     .me {
@@ -391,18 +362,15 @@ figure {
         margin-bottom: 20px;    
     }
 
-    .draws {
-        margin: 0;
-        height: 350px;
-    }
-
-    .draws img {
-        border-radius: 0;
-    }
-
-    .grid-item {
-        max-width: 75%;
+    .parent {
+        height: 300px;
+        width: 90vw;
         margin: 1% auto;
+    }
+
+    .child {
+        margin: 0;
+        height: 100%;
     }
 
     .footer {
@@ -420,9 +388,5 @@ figure {
 
     .footer p {
         height: 20px;
-    }
-
-    .gallery-phone {
-        display: none;
     }
 }
