@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?dyrqkq');
-  src:  url('fonts/icomoon.eot?dyrqkq#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?dyrqkq') format('truetype'),
-    url('fonts/icomoon.woff?dyrqkq') format('woff'),
-    url('fonts/icomoon.svg?dyrqkq#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?cdehuf');
+  src:  url('fonts/icomoon.eot?cdehuf#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?cdehuf') format('truetype'),
+    url('fonts/icomoon.woff?cdehuf') format('woff'),
+    url('fonts/icomoon.svg?cdehuf#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -32,4 +32,13 @@
 }
 .icon-deviantart:before {
   content: "\eaaa";
+}
+.icon-navigate_before:before {
+  content: "\e408";
+}
+.icon-navigate_next:before {
+  content: "\e409";
+}
+.icon-x-altx-alt:before {
+  content: "\e900";
 }
