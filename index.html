@@ -91,21 +91,21 @@
     </section>
 
     <div class="modal" id="G1">
-        <h3> Gallery 1 </h3>
-        <div class="imagen">
-            <a href="#G5" class="icon-navigate_before"></a>
-            <a href="#G2"> <img src="https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-9/54428696_1456256727842095_1441279810654437376_n.jpg?_nc_cat=101&_nc_ht=scontent.fbog2-1.fna&oh=85e65291118d54cdbb12a6464bfb45c2&oe=5D1E6C1C" alt=""></a>
-            <a href="#G2" class="icon-navigate_next"></a>
+            <h3> Gallery 1 </h3>
+            <div class="imagen">
+                <a class="icon-navigate_before" onclick=atras1()></a>
+                <a> <img src="images/IMG1.jpg" id="foto1" onclick="adelante1()" alt=""></a>
+                <a class="icon-navigate_next" onclick="adelante1()"></a>
+            </div>
+            <a class="cerrar icon-x-altx-alt" href=""></a>
         </div>
-        <a class="cerrar icon-x-altx-alt" href=""></a>
-    </div>
 
     <div class="modal" id="G2">
         <h3> Gallery 2 </h3>
         <div class="imagen">
-            <a href="#G1" class="icon-navigate_before"></a>
-            <a href="#G3"> <img src="https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-9/54256682_1456256904508744_2423935535903932416_n.jpg?_nc_cat=100&_nc_ht=scontent.fbog2-1.fna&oh=004ec274ba1c0e496ab1baf665dd5b45&oe=5D1CC916" alt=""></a>
-            <a href="#G3" class="icon-navigate_next"></a>
+            <a class="icon-navigate_before" onclick="atras2()"></a>
+            <a> <img src="images/IMG6.jpg" id="foto2" onclick="adelante2()" alt=""></a>
+            <a class="icon-navigate_next" onclick="adelante2()"></a>
         </div>
         <a class="cerrar icon-x-altx-alt" href=""></a>
     </div>
@@ -113,9 +113,9 @@
     <div class="modal" id="G3">
         <h3> Gallery 3 </h3>
         <div class="imagen">
-            <a href="#G2" class="icon-navigate_before"></a>
-            <a href="#G4"> <img src="https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-9/54258069_1456257404508694_45728156023259136_n.jpg?_nc_cat=111&_nc_ht=scontent.fbog2-1.fna&oh=0659e45ffafe42c40619ca57ffc51ba0&oe=5D152D78" alt=""></a>
-            <a href="#G4" class="icon-navigate_next"></a>
+            <a class="icon-navigate_before" onclick="atras3()"></a>
+            <a> <img src="images/IMG11.jpg" id="foto3" onclick="adelante3()" alt=""></a>
+            <a class="icon-navigate_next" onclick="adelante3()"></a>
         </div>
         <a class="cerrar icon-x-altx-alt" href=""></a>
     </div>
@@ -123,9 +123,9 @@
     <div class="modal" id="G4">
         <h3> Gallery 4 </h3>
         <div class="imagen">
-            <a href="#G3" class="icon-navigate_before"></a>
-            <a href="#G5"> <img src="https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-9/54420970_1456257701175331_3625363907230564352_n.jpg?_nc_cat=106&_nc_ht=scontent.fbog2-1.fna&oh=3e0ab637f696989cad81b9561cf8fb52&oe=5D11DB18" alt=""></a>
-            <a href="#G5" class="icon-navigate_next"></a>
+            <a class="icon-navigate_before" onclick="atras4()"></a>
+            <a> <img src="images/IMG16.jpg" id="foto4" onclick="adelante4()" alt=""></a>
+            <a class="icon-navigate_next" onclick="adelante4()"></a>
         </div>
         <a class="cerrar icon-x-altx-alt" href=""></a>
     </div>
@@ -133,12 +133,13 @@
     <div class="modal" id="G5">
         <h3> Gallery 5 </h3>
         <div class="imagen">
-            <a href="#G4" class="icon-navigate_before"></a>
-            <a href="#G1"> <img src="https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-9/54462549_1456257387842029_1038836311252795392_n.jpg?_nc_cat=101&_nc_ht=scontent.fbog2-1.fna&oh=4d2fa8a4ca31df920676ddc970d97305&oe=5D186DF0" alt=""></a>
-            <a href="#G1" class="icon-navigate_next"></a>
+            <a class="icon-navigate_before" onclick="atras5()"></a>
+            <a> <img src="images/IMG21.jpg" id="foto5" onclick="adelante4()" alt=""></a>
+            <a class="icon-navigate_next" onclick="adelante5()"></a>
         </div>
         <a class="cerrar icon-x-altx-alt" href=""></a>
     </div>
 
+    <script src ="main.js"></script>
 </body>
 </html>
