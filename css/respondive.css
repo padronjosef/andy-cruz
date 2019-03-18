@@ -1,32 +1,6 @@
 @media screen and (min-width: 1024px) {
     
-    .draw-container {
-        margin-left: 3vw;
-        margin-right: 3vw;
-    }
 
-    .parent:hover .child, .parent:focus .child {
-        transform: scale(1.2);
-    }
-    
-    .parent:hover .child:before, .parent:focus .child:before {
-        display: block;
-    }
-    
-    .parent:hover a, .parent:focus a {
-        display: block;
-    }
-    
-    .child:before {
-        content: "";
-        display: none;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
 
                                     /* iconos de redes sociales */
 
