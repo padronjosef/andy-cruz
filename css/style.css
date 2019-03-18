@@ -143,11 +143,11 @@ p {
     transition: all .5s;
 }
 
-.bg-1 {background-image: url("../images/IMG1.jpg");}
-.bg-2 {background-image: url("../images/IMG6.jpg");}
-.bg-3 {background-image: url("../images/IMG11.jpg");}
-.bg-4 {background-image: url("../images/IMG16.jpg");}
-.bg-5 {background-image: url("../images/IMG21.jpg");}
+.bg-1 {background-image: url("../images/1/IMG1.jpg");}
+.bg-2 {background-image: url("../images/2/IMG6.jpg");}
+.bg-3 {background-image: url("../images/3/IMG11.jpg");}
+.bg-4 {background-image: url("../images/4/IMG16.jpg");}
+.bg-5 {background-image: url("../images/5/IMG21.jpg");}
 
 .child a {
     display: none;
