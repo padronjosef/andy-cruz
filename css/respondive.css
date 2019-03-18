@@ -38,7 +38,6 @@
 @media screen and (max-width: 768px) {
     body {
         background-image: url("../images/wallpaper-phone.jpg");
-        scr
     }
 
     .me {
@@ -64,20 +63,20 @@
 
 @media screen and (max-width: 480px) {
     .grid-container{
-        grid-template-columns: [linea1] auto;
+        grid-template-columns: [linea1];
         grid-template-areas:" header "
                             " photo "
                             " me "
                             " draw-container "
                             " footer ";
-                            width: 100vw;
+        grid-template-columns: 1fr;
     }
 
     .photo {
         margin: 10px auto;
         display: flex;
         justify-content: center;
-        width: 95vw;
+        width: 100%;
     }
 
     .photo-container {
@@ -88,25 +87,25 @@
     .me {
         margin: auto;
         margin-bottom: 10px;    
-        width: 90vw;
+        width: 95%;
     }
 
     .draw-container {
         display: flex;
-        width: 90vw;
+        width: 90%;
         margin: auto;
         margin-bottom: 10px;
     }
 
     .parent {
         height: 400px;
-        width: 100%;
+        width: 99%;
         margin-top: 2px;
     }
 
     .child {
         margin: 0;
-        height: 100%;
+        height: 99%;
     }
 
     .footer {
@@ -115,6 +114,7 @@
         border-radius: 0;
         margin: 0 auto;
         padding: 0;
+        width: 100%;
     }
 
     .footer span {
