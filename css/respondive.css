@@ -38,6 +38,7 @@
 @media screen and (max-width: 768px) {
     body {
         background-image: url("../images/wallpaper-phone.jpg");
+        scr
     }
 
     .me {
@@ -87,6 +88,11 @@
         width: 95vw;
         margin: auto;
         margin-bottom: 20px;    
+    }
+
+    .draw-container {
+        display: flex;
+        max-width: 480px;
     }
 
     .parent {
