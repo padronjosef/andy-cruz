@@ -55,14 +55,14 @@ body{
 }
 
 .main-container {
-    width: 100vw;
     text-align: center;
 }
 
 .grid-container{
+    height: 100vh;
     display: grid;
-    grid-template-columns: [linea1] 0.5fr[linea2] 8fr;
-    grid-template-rows: [header] [me] [hero] [footer];
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 30px 80px 1fr 30px;
     grid-template-areas:"header header"
                         "photo me"
                         "draw-container draw-container"
@@ -85,49 +85,48 @@ p {
     display: flex;
     justify-content: center;
     color: #ffffff;
-    margin-top: 5px
+    margin-top: 2px;
 }
 
 .header p {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 1.5em;
+    font-size: 22px;
     border-radius: 50% 50% 50px 50px;
     background: #565656;
-    height: 30px;
+    height: 100%;
     width: 300px;
 }
 
                                                                         /*me*/
 .me {
     grid-area: me;
-    font-size: 1.0em;
+    display: flex;
     font-weight: bold;
     color: #3a3a3a;
     background: #ffffff;
     font-family: 'Ubuntu', sans-serif;
-    height: auto;
     width: 80%;
-    margin: 30px 0 70px 7%;
-    border-radius: 5px;
+    margin: 30px 0 0px 7%;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
 }
 
 .me p {
     padding: 0 20px;
+    background: white;
 }
 
                                                                         /*imagenes*/
 .draw-container {
     grid-area: draw-container;
-    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .parent {
-    height: 380px;
+    height: 350px;
     width: 18%;
     margin: auto;
     border: 2px solid rgba(0, 0, 0, .5);
@@ -177,11 +176,10 @@ p {
     align-items: center;
     justify-content: space-around;
     color: #D5D5D5;
-    height: 35px;
+    height: 100%;
     width: 50%;
-    margin: auto;
-    border-radius: 50px 50px 50% 50%;
-    margin-top: 20px;
+    border-radius: 50% 50% 50px 50px;
+    margin: 0 auto;
 }
 
 .footer img {
