@@ -8,8 +8,7 @@
     font-weight: normal;
     font-style: normal;
 }
-
-  [class^="icon-"], [class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
     speak: none;
@@ -18,23 +17,18 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
 .icon-facebook:before {
     content: "\ea90";
 }
-
 .icon-instagram:before {
     content: "\ea92";
 }
-
 .icon-deviantart:before {
     content: "\eaaa";
-
 }
 .icon-navigate_before:before {
     content: "\e408";
@@ -46,23 +40,19 @@
     content: "\e900";
 }
 
-
 body{
     margin: 0;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
-}
-
-.main-container {
     text-align: center;
+    height: 100vh;
 }
 
 .grid-container{
     height: 100vh;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: 30px 80px 1fr 30px;
+    grid-template-rows: 30px 80px 1fr 35px;
     grid-template-areas:"header header"
                         "photo me"
                         "draw-container draw-container"
@@ -126,7 +116,7 @@ p {
 }
 
 .parent {
-    height: 350px;
+    height: 70%;
     width: 18%;
     margin: auto;
     border: 2px solid rgba(0, 0, 0, .5);
@@ -199,7 +189,6 @@ p {
 }
 
                                     /* creditos */
-
 .grid-credits{
     position: relative;
 }
